@@ -32,17 +32,7 @@ Creating thread: a) create a subclass of Thread and override the run() method.b)
 - **What is stale exceptions**<br>
 when an element that was previously located on the page, is no longer available
 - **How to do drag and drop in selenium**<br>To perform the drag and drop, the Actions class provides the method, action. dragAndDrop(Source, Destination);<br> This method takes two input parameters, the first parameter is for the source location, and the second is for the destination location.
-- **Java program to find the largest two numbers in a given array**<br>
-  `int max1 = Integer.MIN_VALUE;`<br>
-  `int max2 = Integer.MIN_VALUE;`<br>
-  for (int number : numbers) {
-  if (number > max1) {
-  max2 = max1;
-  max1 = number;
-  } else if (number > max2) {
-  max2 = number;
-  }
-  }`
+
 - **wiremock**<br>
 WireMock is a tool for building mock APIs. Create stable development environments, isolate yourself from flakey 3rd parties and simulate APIs that don't exist yet.
 
@@ -112,5 +102,15 @@ error: The problem in code leads to errors<br>
 fault: A fault is introduced into the software as the result of an error<br>
 defect: flaw in a component or system that can cause the component or system to fail to perform its required function, e.g., an incorrect statement or data definition<br>
 failure: a defect, if encountered during execution, may cause a failure<br>
-
-
+- **Pairwise testing**<br>
+- used for lowering number of test cases without getting too much danger, algorithm can be used in order to select test cases
+- **Test techniques**<br>
+- Equivalence testing -  used to reduce the number of test cases by identifying different sets of data that are not the same and only executing one test from each set of data
+- Boundary value analysis - behavior of the system at the boundaries of allowed dat
+- State transition testing - validate allowed and disallowed states and transitions from one state to another by various input data
+- Pairwise (all-pairs) testing
+- **What is Adhoc Testing?**<br>
+- A testing phase where the tester tries to ‘break’ the system by randomly trying the system’s functionality. Can include negative testing as well. See also Monkey Testing.
+- **What is Bottom Up Testing?**<br>
+- An approach to integration testing where the lowest level components are tested first then used to facilitate the testing of higher-level components.
+  The process is repeated until the component at the top of the hierarchy is tested.
