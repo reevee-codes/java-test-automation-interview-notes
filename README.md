@@ -1,6 +1,6 @@
-# java-test-automation-notes
-
-<h3>Selenium/TestNG</h3>
+# Java Test Automation Notes
+- ---------------------------------
+<h3>Selenium + automation</h3>
 
 - **Difference between Find Elements and find element**<br>
   <p>FindElement() method: to access single element on the web page, returns the object of the first matching element of locator, throws NoSuchElementException</p> 
@@ -20,22 +20,20 @@
 - **How to read excel file in selenium**
   Apache POI is an open-source Java library often utilized to create and handle Microsoft Office-based files
 - **How to do parallel Testing**
-- The parallel attribute can be extended for multiple values, as below:
-
+- The parallel attribute can be extended for multiple values, as below:<br>
 Methods: Helps run methods in separate threads
-Tests: Help to run all methods belonging to the same tag in the same thread
-Classes: Helps to run all methods belonging to a class in a single thread
-Instances: Helps run all methods in the same instance in the same thread
-Creating thread: a) create a subclass of Thread and override the run() method.b) to pass an object that implements Runnable (java.lang.Runnable to the Thread constructor.
+Tests: Help to run all methods belonging to the same tag in the same thread<br>
+Classes: Helps to run all methods belonging to a class in a single thread<br>
+Instances: Helps run all methods in the same instance in the same thread<br>
+Creating thread: a) create a subclass of Thread and override the run() method<br> 
+- b) to pass an object that implements Runnable interface to the Thread constructor
 - **Exceptions in selenium**<br>
 - ElementNotSelectableException, ElementNotVisibleException, NoSuchFrameException, NoSuchWindowException
 - **What is stale exceptions**<br>
 when an element that was previously located on the page, is no longer available
 - **How to do drag and drop in selenium**<br>To perform the drag and drop, the Actions class provides the method, action. dragAndDrop(Source, Destination);<br> This method takes two input parameters, the first parameter is for the source location, and the second is for the destination location.
-
 - **wiremock**<br>
 WireMock is a tool for building mock APIs. Create stable development environments, isolate yourself from flakey 3rd parties and simulate APIs that don't exist yet.
-
 - **Access modifiers in java**<br>
 public: visible in class, subclass, package, global <br>
 protected: visible in class, subclass, package (protected from global) <br>
@@ -49,7 +47,33 @@ Unchecked: NPE, ArrayIndexOutOfBonds, ArithmeticException
   driver.switchTo().alert().accept();
 - **how to handle frames:**<br>
 driver.switchTo().frame(“ID of the frame“);
+- **difference between soft and hard assert**<br>
+  Soft assert allows the test to continue even if an assertion fails, while hard assert stops the test immediately
+- **TestNG vs Cucumber**<br>
+  TestNG is a testing framework for Java while Cucumber is a BDD tool for behavior-driven development.
 
+TestNG is used for unit, functional, and integration testing<br>
+Cucumber is used for acceptance testing and supports BDD<br>
+TestNG uses annotations to define test methods and groups<br>
+Cucumber uses Gherkin syntax to define scenarios and steps<br>
+TestNG generates HTML reports while Cucumber generates reports in various formats<br>
+TestNG supports parallel testing while Cucumber does not<br>
+TestNG is widely used in the Java community while Cucumber is popular in the Agile community<br>
+- **OOP concepts**
+- inheritance, encapsulation, polymorphism, and abstraction
+- **interface vs abstract class**
+Abstract class is a class with partial implementation while interface is a contract with no implementation.
+Abstract class can have both abstract and non-abstract methods while interface can only have abstract methods.
+  (java 9 - interfaces can have private methods, java 8 - static and default methods)
+A class can implement multiple interfaces but can only inherit from one abstract class.
+Abstract class can have constructors while interface cannot.
+Abstract class can have access modifiers while interface methods are public by default.
+- **page object model**<br>
+- **page object factory**<br>
+- **Facade Design Pattern**<br>
+- **Fluent Page Object Model:**<br>
+- **Singleton Design Pattern**<br>
+-----------------------
 <h3>ISTQB related</h3>
 
 - **What is STLC**<br>
@@ -114,3 +138,10 @@ failure: a defect, if encountered during execution, may cause a failure<br>
 - **What is Bottom Up Testing?**<br>
 - An approach to integration testing where the lowest level components are tested first then used to facilitate the testing of higher-level components.
   The process is repeated until the component at the top of the hierarchy is tested.
+- ---------------------------------
+<h3>SQL</h3>
+- **Select all the different values from the Country column in the Customers table**<br>
+-select distinct Country FROM Customers;
+- **Select all records where the City column has the value "Berlin".**<br>
+- SELECT * FROM Customers where city ='Berlin';<br>
+  SELECT * FROM Customers WHERE NOT City = 'Berlin';
