@@ -145,3 +145,15 @@ failure: a defect, if encountered during execution, may cause a failure<br>
 - **Select all records where the City column has the value "Berlin".**<br>
 - SELECT * FROM Customers where city ='Berlin';<br>
   SELECT * FROM Customers WHERE NOT City = 'Berlin';
+- **alphabetically by city**<br>
+SELECT * FROM Customers ORDER BY City;
+- **reverse order**<br>
+- SELECT * FROM Customers ORDER BY City DESC;
+- **first by the column Country, then, by the column City.**<br>
+- SELECT * FROM Customers order by country, city;
+- - **where the PostalCode column is empty or not**
+- SELECT * FROM Customers WHERE POstalCode is NULL / IS NOT NULL
+- -**Update the City column of all records in the Customers table**
+- UPDATE Customers SET City = 'Oslo';
+- -**Set the value of the City columns to 'Oslo', but only the ones where the Country column has the value "Norway".**
+- UPDATE Customers SET City = 'Oslo' WHERE Country = 'Norway';
