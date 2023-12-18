@@ -167,3 +167,16 @@ SELECT * FROM Customers ORDER BY City;
 - **cp : Copy a file or directory** <br>
 - **mv : Move or rename a file or directory** <br>
 - **pwd : show current path** <br>
+- lista procesow, ilosc pamieci, otworzxyv jakis notatnikiem, jak sie polaczuc z linuxem
+- ---------------------------------
+<h3>HTTP Methods</h3>
+- ---------------------------------
+<h3>HTTP 2.0</h3>
+- ---------------------------------
+<h3>HTTP 3.0</h3>
+- ---------------------------------
+<h3>HTTP Codes</h3>
+- ---------------------------------
+<h3>SSH</h3>
+- ---------------------------------
+<h3>SFTP</h3>
