@@ -157,3 +157,13 @@ SELECT * FROM Customers ORDER BY City;
 - UPDATE Customers SET City = 'Oslo';
 - -**Set the value of the City columns to 'Oslo', but only the ones where the Country column has the value "Norway".**
 - UPDATE Customers SET City = 'Oslo' WHERE Country = 'Norway';
+- ---------------------------------
+<h3>Bash</h3>
+- **cd : Change the directory to a different location** <br>
+- **ls : List the contents of the current directory** <br>
+- **mkdir : Create a new directory** <br>
+- **touch : Create a new file** <br>
+- **rm : Remove a file or directory** <br>
+- **cp : Copy a file or directory** <br>
+- **mv : Move or rename a file or directory** <br>
+- **pwd : show current path** <br>
