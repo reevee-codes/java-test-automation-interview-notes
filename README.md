@@ -180,3 +180,12 @@ SELECT * FROM Customers ORDER BY City;
 <h3>SSH</h3>
 - ---------------------------------
 <h3>SFTP</h3>
+-**extension of SSH. FTP stands for File Transfer Protocol, while SFTP refers to Secure Shell (SSH) File Transfer Protocol. This gives you file transfers that are secured via SSH, which provides full access to shell accounts. A shell account is
+one that sits on a remote server.SFTP uses a tunneling method to transfer data. With the benefit of additional security, FTP, which is less secure, uses direct transfer.**
+- ---------------------------------
+<h3>FTP</h3>
+- **opens 2 connections, one is used to send commands, other is for sending data. commands are “send,” “get,” “change directory,” and “transfer.”
+- uses three different modes: block, stream, and compressed. can perform perform large file size transfers.
+- allows you to send multiple files at once.
+- --------------------------------
+<h3>MFT</h3>
