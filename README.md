@@ -169,14 +169,59 @@ SELECT * FROM Customers ORDER BY City;
 - **pwd : show current path** <br>
 - lista procesow, ilosc pamieci, otworzxyv jakis notatnikiem, jak sie polaczuc z linuxem
 - ---------------------------------
-<h3>HTTP Methods</h3>
+<h3>HTTP Methods (http verbs)</h3>
+GET - retrieves data <br>
+HEAD - response like get but without response body<br>
+POST -  submits an entity to the specified resource<br>
+PUT -  replaces all current representations<br>
+DELETE -  deletes the specified resource<br>
+CONNECT -  establishes a tunnel to the server identified by the target resource<br>
+OPTIONS - describes the communication options for the target resource<br>
+TRACE - performs a message loop-back test along the path to the target resource<br>
+PATCH - applies partial modifications to a resource<br>
+
 - ---------------------------------
 <h3>HTTP 2.0</h3>
 - ---------------------------------
 <h3>HTTP 3.0</h3>
+Unlike previous versions which relied on theTCP, HTTP/3 uses QUIC, a transport protocol built on UDP.<br>
+The same request methods, status codes, and message fields, but encodes them and maintains session state differently<br>
+due to the protocol's adoption of QUIC, HTTP/3 has lower latency and loads more quickly in real-world usage when compared with previous versions: in some cases over 3× faster than with HTTP/1.1<br>
 - ---------------------------------
 <h3>HTTP Codes</h3>
+Informational responses (100 – 199)<br>
+Successful responses (200 – 299)<br>
+Redirection messages (300 – 399)<br>
+Client error responses (400 – 499)<br>
+Server error responses (500 – 599)<br>
+
+<b>Informational responses</b><br>
+100 Continue (the client should continue the request)<br>
+
+<b>Successful responses</b><br>
+200 OK<br>
+201 CREATED<br>
+202 Accepted<br>
+204 No content<br>
+
+<b>Redirection messages</b><br>
+301 Moved permanently
+
+<b>Client error responses</b><br>
+400 Bad request (client error - malformed request syntax)<br>
+401 Unauthorized<br>
+403 Forbidden (client does not have access rights to the content)<br>
+404 Not Found (server cannot find the requested resource)<br>
+418 Im a teapot (server refuses the attempt to brew coffee with a teapot)<br>
+
+<b>Server error responses</b><br>
+500 Internal server error (server has encountered a situation it does not know how to handle)<br>
+501 Not Implemented (The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore that must not return this code) are GET and HEAD.)<br>
+502 Bad Gateway (the server, while working as a gateway to get a response needed to handle the request, got an invalid response)<br>
+503 Service Unavailable (the server is not ready to handle the request)<br>
 - ---------------------------------
 <h3>SSH</h3>
 - ---------------------------------
 <h3>SFTP</h3>
+- ---------------------------------
+<h3>ACID</h3>
