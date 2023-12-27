@@ -6,8 +6,8 @@
   <p>FindElement() method: to access single element on the web page, returns the object of the first matching element of locator, throws NoSuchElementException</p> 
   <p>FindElements() method: identify the list of web elements, returns empty list if can't find</p>
 - **Difference between implicity and explicity wait**<br>
-  `implicit wait` waits for an element to appear on the page<br>
-  `explicit wait` waits for a specific condition
+  `implicit wait` waits for all of the elements<br>
+  `explicit wait` waits for a specific condition for specific element
 - **syntax for explicit wait**<br>
 - `WebDriverWait wait = new WebDriverWait(driver, 5);
   wait.until(somethingThatShouldHappen);`
@@ -66,10 +66,10 @@ Abstract class is a class with partial implementation while interface is a contr
 Abstract class can have both abstract and non-abstract methods while interface can only have abstract methods.
   (java 9 - interfaces can have private methods, java 8 - static and default methods)
 A class can implement multiple interfaces but can only inherit from one abstract class.
-Abstract class can have constructors while interface cannot.
+Abstract class can have constructors while interface cannot but Abstract class also cant be instantiated.
 Abstract class can have access modifiers while interface methods are public by default.
 - **page object model**<br>
-- **page object factory**<br>
+- **page object factory**<br> - to support Page Object Design patterns
 - **Facade Design Pattern**<br>
 - **Fluent Page Object Model:**<br>
 - **Singleton Design Pattern**<br>
@@ -117,22 +117,21 @@ Enter the value- 17.<br>
 Enter the value- 57.<br>
 - **what is defect bug cycle**<br>
 like jira statuses
-- **regression/smoke tests/sanity tests**
+- **regression/smoke tests/sanity tests**<br>
+- Smoke testing verifies the entire system from end to end whereas Sanity Testing verifies only a particular component.<br>
+- Smoke testing is a subset of acceptance testing whereas Sanity testing is a subset of Regression Testing.<br>
 regression -  test the software/ application when a defect is fixed to ensure that the original defect is completely removed  <br>
-smoke tests - minimal set of tests run on each build <br> 
-sanity tests -  very brief run-through of the functionality <br>
 - **: Error vs. Fault vs. Bug vs. Defect vs. Failure**<br>
 error: The problem in code leads to errors<br>
 fault: A fault is introduced into the software as the result of an error<br>
 defect: flaw in a component or system that can cause the component or system to fail to perform its required function, e.g., an incorrect statement or data definition<br>
 failure: a defect, if encountered during execution, may cause a failure<br>
 - **Pairwise testing**<br>
-- used for lowering number of test cases without getting too much danger, algorithm can be used in order to select test cases
 - **Test techniques**<br>
 - Equivalence testing -  used to reduce the number of test cases by identifying different sets of data that are not the same and only executing one test from each set of data
-- Boundary value analysis - behavior of the system at the boundaries of allowed dat
+- Boundary value analysis - behavior of the system at the boundaries of allowed data
 - State transition testing - validate allowed and disallowed states and transitions from one state to another by various input data
-- Pairwise (all-pairs) testing
+- Pairwise (all-pairs) testing - used for lowering number of test cases without getting too much danger, algorithm can be used in order to select test cases<br>
 - **What is Adhoc Testing?**<br>
 - A testing phase where the tester tries to ‘break’ the system by randomly trying the system’s functionality. Can include negative testing as well. See also Monkey Testing.
 - **What is Bottom Up Testing?**<br>
@@ -157,16 +156,21 @@ SELECT * FROM Customers ORDER BY City;
 - UPDATE Customers SET City = 'Oslo';
 - -**Set the value of the City columns to 'Oslo', but only the ones where the Country column has the value "Norway".**
 - UPDATE Customers SET City = 'Oslo' WHERE Country = 'Norway';
+- left join - everything on the left + anything on right that matches
+- right join - everything on the right + anything o nthe left that matches
+- outer join - all on the right and left
+- in7ner join - only things that maych on the left and right
 - ---------------------------------
 <h3>Bash</h3>
-- **cd : Change the directory to a different location** <br>
-- **ls : List the contents of the current directory** <br>
-- **mkdir : Create a new directory** <br>
-- **touch : Create a new file** <br>
-- **rm : Remove a file or directory** <br>
-- **cp : Copy a file or directory** <br>
-- **mv : Move or rename a file or directory** <br>
+- **cd** : go to a different location 
+- **ls** : list the contents of the current directory
+- **mkdir** : create new folder
+- **touch** : create file without any content
+- **rm** : Remove a file or directory <br>
+- **cp** : Copy a file or directory
+- **mv** : Move or rename a file or directory
 - **pwd : show current path** <br>
+- ps (“process status,” helps you see what's happening inside your Linux computer)
 - lista procesow, ilosc pamieci, otworzxyv jakis notatnikiem, jak sie polaczuc z linuxem
 - ---------------------------------
 <h3>HTTP Methods (http verbs)</h3>
@@ -181,7 +185,15 @@ TRACE - performs a message loop-back test along the path to the target resource<
 PATCH - applies partial modifications to a resource<br>
 
 - ---------------------------------
+<h3>HTTP 1 vs HTTP 2 vs HTTP 3</h3>
+HTTP1 - web browser makes several parallel requests for page contents: HTML, images, style, JS<br>
+HTTP2 - web browser makes one TCP connection with requests for all page contents in streams (binary)<br>
+HTTP3 - web browser makes one QUIC connection with requests for all page contents in QUIC streams (binary)<br>
+- ---------------------------------
 <h3>HTTP 2.0</h3>
+HTTP/2 is binary instead of textual.
+HTTP/2 is fully multiplexed.<br>
+This means that HTTP/2 can send multiple requests for data in parallel over a single TCP connection. This is the most advanced feature of the HTTP/2 protocol because it allows you to download web files via ASync mode from one server. Most modern browsers limit TCP connections to one server.
 - ---------------------------------
 <h3>HTTP 3.0</h3>
 Unlike previous versions which relied on theTCP, HTTP/3 uses QUIC, a transport protocol built on UDP.<br>
