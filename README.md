@@ -76,28 +76,37 @@ Abstract class can have access modifiers while interface methods are public by d
 -----------------------
 <h3>ISTQB related</h3>
 
-- **What is STLC**<br>
+- **What is STLC (Software Testing Life Cycle)**<br>
   Process that follows a series of steps or phases, and each phase has specific objectives and deliverables.
   Consists of:
 
-1. **requirement analysis** - analyze the requirements from testing perspectinve
+1. **requirement analysis** - analyze the requirements from testing perspective
 2. **test planning** - test manager/test lead determines the effort and cost estimates entire project, resourse planning, tool selection, training requirements
 3. **test case development** - preparing test cases, scripts, test data, requirements traceability matrix
 4. **test environment setup** - for example devops can prepare TEST/UAT environment
 5. **test execution** - executing the tests
-6. **test closure** - prepare test closure report/test petrics, evaluate cycle competion based on test coverage/quality/time
+6. **test closure** - prepare test closure report/test metrics, evaluate cycle competion based on test coverage/quality/time
 
-- **difference between Test plan,test case,test scenario**<br>
-- The main difference between test cases and test scenarios is that test cases are specific instructions that can be used to test a particular function or feature of an application,
-- while test scenarios are high-level descriptions of how a specific function or feature of an application should work.
+- **difference between Test plan, test case, test scenario**<br>
+- test plan is document describing the scope, approach, resources and schedule of intended test activities
+- test cases are specific instructions that can be used to test a particular function
+- test scenarios are high-level descriptions of how a specific feature of an application should work
+
 - **7 rules of testing**
-1. Testing shows presence of defects, not abscence of defects
-2. Exhaustive testing is impossible
-3. Early testing saves time and money
-4. Defects cluster together
-5. Beware of the pesticide paradox
-6. Testing is context dependent
-7. Absence-of-errors is a fallacy
+1. Testing shows presence of defects, not abscence of defects<br>
+   (Testing can show that defects are present, but cannot prove that there are no defects)<br>
+2. Exhaustive testing is impossible <br>
+   (Testing everything (all combinations) is not possible)
+3. Early testing saves time and money<br>
+   (Early testing is sometimes referred to as shift left. Testing early in the software development lifecycle helps reduce or eliminate costly changes)
+4. Defects cluster together<br>
+   (small number of modules usually contains most of the defects discovered)
+5. Beware of the pesticide paradox<br>
+   (If the same tests are repeated over and over again, eventually these tests no longer find any new defects)
+6. Testing is context dependent<br>
+   (Testing is done differently in different contexts)
+7. Absence-of-errors is a fallacy<br>
+   ( it is a fallacy (i.e., a mistaken belief) to expect that just finding and fixing a large number of defects will ensure the success of a system. For example, thoroughly testing all specified requirements and fixing all defects found could still produce a system that is difficult to use, that does not fulfill the users’ needs and expectations, or that is inferior compared to other competing systems.)
 - **Boundary value testing**
   It checks for the input values near the boundary that have a higher chance of error.<br>
   Example: Consider a system that accepts ages from 18 to 56.
@@ -118,25 +127,36 @@ Enter the value- 57.<br>
 - **what is defect bug cycle**<br>
 like jira statuses
 - **regression/smoke tests/sanity tests**<br>
-- Smoke testing verifies the entire system from end to end whereas Sanity Testing verifies only a particular component.<br>
-- Smoke testing is a subset of acceptance testing whereas Sanity testing is a subset of Regression Testing.<br>
+- Smoke testing verifies the entire system e2e (acceptance testing) <br>
+- Sanity Testing verifies only a particular component (regression testing) <br>
 regression -  test the software/ application when a defect is fixed to ensure that the original defect is completely removed  <br>
 - **: Error vs. Fault vs. Bug vs. Defect vs. Failure**<br>
-error: The problem in code leads to errors<br>
-fault: A fault is introduced into the software as the result of an error<br>
-defect: flaw in a component or system that can cause the component or system to fail to perform its required function, e.g., an incorrect statement or data definition<br>
-failure: a defect, if encountered during execution, may cause a failure<br>
+1. error: The problem in code leads to errors<br>
+2. fault: result of an error<br>
+3. defect: fail to perform its required function<br>
+4. failure: defect if encountered during execution =  failure<br>
 - **Pairwise testing**<br>
 - **Test techniques**<br>
-- Equivalence testing -  used to reduce the number of test cases by identifying different sets of data that are not the same and only executing one test from each set of data
+- Equivalence testing -  used to reduce the number of test cases by identifying different sets of data
+that are not the same and only executing one test from each set of data
 - Boundary value analysis - behavior of the system at the boundaries of allowed data
-- State transition testing - validate allowed and disallowed states and transitions from one state to another by various input data
+- State transition testing - validate allowed and disallowed states and transitions
+from one state to another by various input data
 - Pairwise (all-pairs) testing - used for lowering number of test cases without getting too much danger, algorithm can be used in order to select test cases<br>
 - **What is Adhoc Testing?**<br>
-- A testing phase where the tester tries to ‘break’ the system by randomly trying the system’s functionality. Can include negative testing as well. See also Monkey Testing.
+- A testing phase where the tester tries to ‘break’ the system by randomly trying the system’s functionality.<br>
+Can include negative testing as well. See also Monkey Testing.
 - **What is Bottom Up Testing?**<br>
 - An approach to integration testing where the lowest level components are tested first then used to facilitate the testing of higher-level components.
   The process is repeated until the component at the top of the hierarchy is tested.
+- **Pyramid of testing (from bottom to up)**<br>
+- Unit
+- Component
+- Integration
+- E2E
+- **Static vs Dynamic testing**<br>
+- Static Testing involves testing the software without running it<br>
+- Dynamic Testing involves executing the program<br>
 - ---------------------------------
 <h3>SQL</h3>
 - **Select all the different values from the Country column in the Customers table**<br>
@@ -157,9 +177,9 @@ SELECT * FROM Customers ORDER BY City;
 - -**Set the value of the City columns to 'Oslo', but only the ones where the Country column has the value "Norway".**
 - UPDATE Customers SET City = 'Oslo' WHERE Country = 'Norway';
 - left join - everything on the left + anything on right that matches
-- right join - everything on the right + anything o nthe left that matches
-- outer join - all on the right and left
-- in7ner join - only things that maych on the left and right
+- right join - everything on the right + anything on the left that matches
+- outer join - all on the right and left (Outer Join will also keep information that is not related to the other table in the resulting table)
+- inner join - only things that match on the left and right (inner join will keep only the information from both tables that's related to each other (in the resulting table))
 - ---------------------------------
 <h3>Bash</h3>
 - **cd** : go to a different location 
@@ -183,7 +203,7 @@ CONNECT -  establishes a tunnel to the server identified by the target resource<
 OPTIONS - describes the communication options for the target resource<br>
 TRACE - performs a message loop-back test along the path to the target resource<br>
 PATCH - applies partial modifications to a resource<br>
-
+POST vs PUT vs PATCH -  PUT is used for creating or replacing resources, POST is used for creating or appending data to resources, and PATCH is used for partially updating existing resources
 - ---------------------------------
 <h3>HTTP 1 vs HTTP 2 vs HTTP 3</h3>
 HTTP1 - web browser makes several parallel requests for page contents: HTML, images, style, JS<br>
@@ -193,7 +213,9 @@ HTTP3 - web browser makes one QUIC connection with requests for all page content
 <h3>HTTP 2.0</h3>
 HTTP/2 is binary instead of textual.
 HTTP/2 is fully multiplexed.<br>
-This means that HTTP/2 can send multiple requests for data in parallel over a single TCP connection. This is the most advanced feature of the HTTP/2 protocol because it allows you to download web files via ASync mode from one server. Most modern browsers limit TCP connections to one server.
+This means that HTTP/2 can send multiple requests for data in parallel over a single TCP connection. This is the most advanced feature of the HTTP/2 protocol
+because it allows you to download web files via ASync mode from one server.
+Most modern browsers limit TCP connections to one server.
 - ---------------------------------
 <h3>HTTP 3.0</h3>
 Unlike previous versions which relied on theTCP, HTTP/3 uses QUIC, a transport protocol built on UDP.<br>
@@ -232,15 +254,20 @@ Server error responses (500 – 599)<br>
 502 Bad Gateway (the server, while working as a gateway to get a response needed to handle the request, got an invalid response)<br>
 503 Service Unavailable (the server is not ready to handle the request)<br>
 - ---------------------------------
-<h3>SSH</h3>
-- ---------------------------------
-<h3>SFTP</h3>
--**extension of SSH. FTP stands for File Transfer Protocol, while SFTP refers to Secure Shell (SSH) File Transfer Protocol. This gives you file transfers that are secured via SSH, which provides full access to shell accounts. A shell account is
-one that sits on a remote server.SFTP uses a tunneling method to transfer data. With the benefit of additional security, FTP, which is less secure, uses direct transfer.**
-- ---------------------------------
 <h3>FTP</h3>
-- **opens 2 connections, one is used to send commands, other is for sending data. commands are “send,” “get,” “change directory,” and “transfer.”
+The ftp command opens the user interface to the Internet's File Transfer Protocol.<br>
+This user interface, called the command interpreter, enables you to log in to a remote system and perform a variety of operations with its file system.<br>
+- opens 2 connections, one is used to send commands, other is for sending data. commands are “send,” “get,” “change directory,” and “transfer.”
 - uses three different modes: block, stream, and compressed. can perform perform large file size transfers.
 - allows you to send multiple files at once.
+- ---------------------------------
+<h3>SSH</h3>
+a network protocol that allows two devices to communicate and share data remotely over an unsecured network, like the Internet. The primary difference between Secure Shell Protocol and other login protocols is that SSH provides an encrypted connection.
+- ---------------------------------
+<h3>SFTP</h3>
+Extension of SSH.<br>
+FTP stands for File Transfer Protocol, while SFTP refers to Secure Shell (SSH) File Transfer Protocol. This gives you file transfers that are secured via SSH, which provides full access to shell accounts. A shell account is
+one that sits on a remote server.SFTP uses a tunneling method to transfer data. With the benefit of additional security, FTP, which is less secure, uses direct transfer.
+
 - --------------------------------
 <h3>ACID</h3>
