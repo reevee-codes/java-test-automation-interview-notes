@@ -71,6 +71,7 @@ Abstract class can have access modifiers while interface methods are public by d
 - **page object model**<br>
 - **page object factory**<br> - to support Page Object Design patterns
 - **Facade Design Pattern**<br>
+- fluent wait
 - **Fluent Page Object Model:**<br>
 - **Singleton Design Pattern**<br>
 -----------------------
@@ -271,3 +272,24 @@ one that sits on a remote server.SFTP uses a tunneling method to transfer data. 
 
 - --------------------------------
 <h3>ACID</h3>
+
+- --------------------------------
+<h3>MOCK VS STUB</h3>
+
+<br><b>STUB</b><br> is a fake class that comes with preprogrammed return values. It’s injected into the class under test to give you absolute control over what’s being tested as input. A typical stub is a database connection that allows you to mimic any scenario without having a real database.<br>
+Purpose: To provide pre-determined behavior. A stub provides canned responses, irrespective of what input it gets.<br>
+`List stubbedList = Mockito.mock(List.class);`<br>
+`Mockito.when(stubbedList.get(0)).thenReturn("first");`<br>
+-------------------------------------------------
+<br><b>MOCK</b><br>
+A <b>mock</b> is a fake class that can be examined after the test is finished for its interactions with the class under test. For example, you can ask it whether a method was called or how many times it was called.
+Purpose: To verify behavior. A mock is used to check if a certain method has been called with the right parameters.<br>
+You can use a mock object to verify that you have called it in the way expected.<br>
+`List mockedList = Mockito.mock(List.class);`
+-------------------------------------------------
+<br><b>SPY</b>
+<br>partial mock. Spies call the real methods unless they’re stubbed. Real spies should be used carefully and occasionally, for example when dealing with legacy code.<br>
+<b>PROBLEMS WITH USING:</b>You might be tempted to use a spy to mock getBook(String id) method so that it doesn’t hit the database for example, is seems fine, but here’s the catch: if someone later modifies the getBook(String id) method in the BookService class, your test would still pass even though the actual behavior of getBookTitle(String id) might have changed.
+<br>`List list = new LinkedList();`<br>
+`List spy = Mockito.spy(list);`
+-------------------------------------------------
