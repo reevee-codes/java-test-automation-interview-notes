@@ -1,4 +1,4 @@
-# Java Test Automation Notes
+# Java Test Automation Interview Notes (mid/senior level)
 - ---------------------------------
 <h3>Selenium + automation</h3>
 
