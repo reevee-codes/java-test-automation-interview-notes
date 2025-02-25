@@ -1,4 +1,5 @@
 # Java Test Automation Interview Notes (mid/senior level)
+Mostly focused on Selenium and Java, also elements of backend testing.
 - ---------------------------------
 <h3>Selenium + automation</h3>
 
