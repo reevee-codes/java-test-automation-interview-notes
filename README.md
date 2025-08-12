@@ -1,7 +1,10 @@
-# Test Automation Interview Notes (mid/senior level, Java)
+# Test Automation Interview Notes (Java-focused)
 - ---------------------------------
 <h3>UI automation</h3>
-- Difference between Selenium and Selenide
+- Difference between Selenium and Selenide - Selenide has better assertions, reduced boilerplate, automatically takes screenshots, simplifies file upload
+- **page object model**<br>
+- **page object factory**<br> - to support Page Object Design patterns
+- fluent page object model
 
 - **Difference between Find Elements and find element**<br>
   <p>FindElement() method: to access single element on the web page, returns the object of the first matching element of locator, throws NoSuchElementException</p> 
@@ -32,9 +35,11 @@ Creating thread: a) create a subclass of Thread and override the run() method<br
 - ElementNotSelectableException, ElementNotVisibleException, NoSuchFrameException, NoSuchWindowException
 - **What is stale exceptions**<br>
 when an element that was previously located on the page, is no longer available
-- **How to do drag and drop in selenium**<br>To perform the drag and drop, the Actions class provides the method, action. dragAndDrop(Source, Destination);<br> This method takes two input parameters, the first parameter is for the source location, and the second is for the destination location.
-- **wiremock**<br>
-WireMock is a tool for building mock APIs. Create stable development environments, isolate yourself from flakey 3rd parties and simulate APIs that don't exist yet.
+
+BACKEND AUTOMATION:
+
+-----------
+JAVA
 - **Access modifiers in java**<br>
 public: visible in class, subclass, package, global <br>
 protected: visible in class, subclass, package (protected from global) <br>
@@ -50,16 +55,15 @@ Unchecked: NPE, ArrayIndexOutOfBonds, ArithmeticException
 driver.switchTo().frame(“ID of the frame“);
 - **difference between soft and hard assert**<br>
   Soft assert allows the test to continue even if an assertion fails, while hard assert stops the test immediately
-- **TestNG vs Cucumber**<br>
-  TestNG is a testing framework for Java while Cucumber is a BDD tool for behavior-driven development.
+----------
 
-TestNG is used for unit, functional, and integration testing<br>
-Cucumber is used for acceptance testing and supports BDD<br>
-TestNG uses annotations to define test methods and groups<br>
-Cucumber uses Gherkin syntax to define scenarios and steps<br>
-TestNG generates HTML reports while Cucumber generates reports in various formats<br>
-TestNG supports parallel testing while Cucumber does not<br>
-TestNG is widely used in the Java community while Cucumber is popular in the Agile community<br>
+PYTHON:
+
+-----------
+AI:
+------------
+
+  GENERAL PROGRAMMING:
 - **OOP concepts**
 - inheritance, encapsulation, polymorphism, and abstraction
 - **interface vs abstract class**
@@ -69,8 +73,7 @@ Abstract class can have both abstract and non-abstract methods while interface c
 A class can implement multiple interfaces but can only inherit from one abstract class.
 Abstract class can have constructors while interface cannot but Abstract class also cant be instantiated.
 Abstract class can have access modifiers while interface methods are public by default.
-- **page object model**<br>
-- **page object factory**<br> - to support Page Object Design patterns
+
 - **Facade Design Pattern**<br>
 - fluent wait
 - **Fluent Page Object Model:**<br>
@@ -159,29 +162,6 @@ Can include negative testing as well. See also Monkey Testing.
 - **Static vs Dynamic testing**<br>
 - Static Testing involves testing the software without running it<br>
 - Dynamic Testing involves executing the program<br>
-- ---------------------------------
-<h3>SQL</h3>
-- **Select all the different values from the Country column in the Customers table**<br>
--select distinct Country FROM Customers;
-- **Select all records where the City column has the value "Berlin".**<br>
-- SELECT * FROM Customers where city ='Berlin';<br>
-  SELECT * FROM Customers WHERE NOT City = 'Berlin';
-- **alphabetically by city**<br>
-SELECT * FROM Customers ORDER BY City;
-- **reverse order**<br>
-- SELECT * FROM Customers ORDER BY City DESC;
-- **first by the column Country, then, by the column City.**<br>
-- SELECT * FROM Customers order by country, city;
-- - **where the PostalCode column is empty or not**
-- SELECT * FROM Customers WHERE POstalCode is NULL / IS NOT NULL
-- -**Update the City column of all records in the Customers table**
-- UPDATE Customers SET City = 'Oslo';
-- -**Set the value of the City columns to 'Oslo', but only the ones where the Country column has the value "Norway".**
-- UPDATE Customers SET City = 'Oslo' WHERE Country = 'Norway';
-- left join - everything on the left + anything on right that matches
-- right join - everything on the right + anything on the left that matches
-- outer join - all on the right and left (Outer Join will also keep information that is not related to the other table in the resulting table)
-- inner join - only things that match on the left and right (inner join will keep only the information from both tables that's related to each other (in the resulting table))
 - ---------------------------------
 <h3>Bash</h3>
 - **cd** : go to a different location 
