@@ -1,7 +1,7 @@
-# Java Test Automation Interview Notes (mid/senior level)
-Mostly focused on Selenium and Java, also elements of backend testing.
+# Test Automation Interview Notes (mid/senior level, Java)
 - ---------------------------------
-<h3>Selenium + automation</h3>
+<h3>UI automation</h3>
+- Difference between Selenium and Selenide
 
 - **Difference between Find Elements and find element**<br>
   <p>FindElement() method: to access single element on the web page, returns the object of the first matching element of locator, throws NoSuchElementException</p> 
