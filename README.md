@@ -2,6 +2,7 @@
 - ---------------------------------
 <h3>UI automation</h3>
 - Difference between Selenium and Selenide - Selenide has better assertions, reduced boilerplate, automatically takes screenshots, simplifies file upload
+- Playwright - 
 - **page object model**<br>
 - **page object factory**<br> - to support Page Object Design patterns
 - fluent page object model
