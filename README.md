@@ -3,12 +3,20 @@
 <h3>UI automation</h3>
 **Selenium vs Selenide**  
 - Selenide has better assertions, reduced boilerplate, automatically takes screenshots, and simplifies file upload.  
+<br>
+
 **Playwright (JS) vs Selenium (Java)**  
 - Playwright is generally faster, easier to set up, auto-waits for elements, and has built-in modern features like multi-tab, network mocking, and cross-browser support.  
+<br>
+
 **Page Object Model (POM)**  
 - POM separates page structure from test logic, improving maintainability and readability.  
+<br>
+
 **Page Factory**  
 - Page Factory initializes web elements in POM with annotations, reducing boilerplate and improving readability.  
+<br>
+
 **Fluent Page Object Model**  
 - Fluent POM uses chainable methods for cleaner, readable, and more expressive test steps.  
 
