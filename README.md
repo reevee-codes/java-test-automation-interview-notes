@@ -18,7 +18,8 @@
 <br>
 
 **Fluent Page Object Model**  
-- Fluent POM uses chainable methods for cleaner, readable, and more expressive test steps.  
+- Fluent POM uses chainable methods for cleaner, readable, and more expressive test steps.
+<br>  
 
 - **Difference between Find Elements and find element**<br>
   <p>FindElement() method: to access single element on the web page, returns the object of the first matching element of locator, throws NoSuchElementException</p> 
