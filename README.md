@@ -1,6 +1,7 @@
 # Test Automation Interview Notes (Java-focused)
 - ---------------------------------
 <h3>UI automation</h3>
+
 **Selenium vs Selenide**: Selenide has better assertions, reduced boilerplate, automatically takes screenshots, and simplifies file upload.<br>
 **Playwright (JS) vs Selenium (Java)**: Playwright is generally faster, easier to set up, auto-waits for elements, and has built-in modern features like multi-tab, network mocking, and cross-browser support.<br>
 **Page Object Model (POM)**: POM separates page structure from test logic, improving maintainability and readability.<br>
