@@ -8,10 +8,10 @@
 **Page Factory**: Page Factory initializes web elements in POM with annotations, reducing boilerplate and improving readability.<br>
 **Fluent Page Object Model**: Fluent POM uses chainable methods for cleaner, readable, and more expressive test steps.<br>
 
-
-- **Difference between Find Elements and find element**<br>
-  <p>FindElement() method: to access single element on the web page, returns the object of the first matching element of locator, throws NoSuchElementException</p> 
-  <p>FindElements() method: identify the list of web elements, returns empty list if can't find</p>
+<h3>Computer science</h3>
+**Concurrency vs parallelism**: parallelism handles many tasks at once but doesn't guarantee efficiency, concurrency is about switching between different tasks at once<br>
+<img width="463" height="545" alt="image" src="https://github.com/user-attachments/assets/279534fd-0cd6-4c62-90ac-1aa0ebdcce5e" /><br>
+**Difference between Find Elements and find element**: FindElement() method: throws NoSuchElementException, FindElements() method: identify the list of web elements, returns empty list if can't find<br>
 - **Difference between implicity and explicity wait**<br>
   `implicit wait` waits for all of the elements<br>
   `explicit wait` waits for a specific condition for specific element
