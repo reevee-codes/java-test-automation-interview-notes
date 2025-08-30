@@ -15,8 +15,8 @@ W połowie po polsku, w połowie po angielsku, tak jak wyglądają rozmowy techn
 <br>
 **Concurrency vs parallelism:** parallelism handles many tasks at once but doesn't guarantee efficiency, concurrency is about switching between different tasks at once<br>
 **Concurrency (współbieżność)** → wiele zadań _postrzegasz_ jako wykonywane w tym samym czasie, ale w rzeczywistości system może je przełączać (np. jedno chwilę działa, potem drugie, potem znowu pierwsze).
-    
 **Parallelism (równoległość)** → wiele zadań _naprawdę_ działa jednocześnie, fizycznie na różnych rdzeniach procesora.
+=======
 <img width="463" height="545" alt="image" src="https://github.com/user-attachments/assets/279534fd-0cd6-4c62-90ac-1aa0ebdcce5e" /><br>
 **Difference between Find Elements and find element**: FindElement() method: throws NoSuchElementException, FindElements() method: identify the list of web elements, returns empty list if can't find<br>
 - **Difference between implicity and explicity wait**<br>
