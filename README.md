@@ -1,15 +1,22 @@
-# Test Automation Interview Notes (Java-focused)
+
+# Test Automation Interview Notes (Java-focused) POLISH #Ponglish
 - ---------------------------------
+Powered by my research, google, books, few LLMs.
+W połowie po polsku, w połowie po angielsku, tak jak wyglądają rozmowy techniczne w korpo. Last update: 30.08.2025.
 <h3>UI automation</h3>
 
-**Selenium vs Selenide**: Selenide has better assertions, reduced boilerplate, automatically takes screenshots, and simplifies file upload.<br>
-**Playwright (JS) vs Selenium (Java)**: Playwright is generally faster, easier to set up, auto-waits for elements, and has built-in modern features like multi-tab, network mocking, and cross-browser support.<br>
-**Page Object Model (POM)**: POM separates page structure from test logic, improving maintainability and readability.<br>
-**Page Factory**: Page Factory initializes web elements in POM with annotations, reducing boilerplate and improving readability.<br>
+**Selenium vs Selenide**: Selenide has better assertions, reduced boilerplate, automatically takes screenshots, and simplifies file upload.<br> Wiele zespołów nadal wybiera Selenium ze względu na wielojęzyczność, większy ekosystem i pełną kontrolę nad WebDriverem, podczas gdy Selenide (jako wrapper) upraszcza pracę głównie w projektach Java, ale kosztem dodatkowej warstwy abstrakcji i mniejszej elastyczności. Innymi słowy, tam gdzie wymagane są niestandardowe integracje, standardyzacja narzędzi w różnych językach i wsparcie „blisko metalu”, surowe Selenium bywa praktyczniejszym wyborem.
+**Playwright (JS) vs Selenium (Java)**: Playwright is generally faster, easier to set up, auto-waits for elements, and has built-in modern features like multi-tab, network mocking, and cross-browser support.<br>Wiele zespołów zostaje przy **Java Selenium** ze względu na ekosystem Javy (JUnit/TestNG, Maven/Gradle), standard WebDriver oraz szersze wsparcie przeglądarek i chmur z real‑device, podczas gdy Playwright JS bywa szybszy i wygodniejszy, ale jest młodszy i mniej ustandaryzowany w środowiskach enterprise. Dodatkowo długowieczność projektu Selenium i większa społeczność ułatwiają wsparcie w złożonych, wieloletnich systemach oraz zgodność z infrastrukturą CI/CD i farmami przeglądarek.
+**Page Object Model (POM)**: POM separates page structure from test logic, improving maintainability and readability.
+**Page Factory**: Page Factory initializes web elements in POM with annotations, reducing boilerplate and improving readability
 **Fluent Page Object Model**: Fluent POM uses chainable methods for cleaner, readable, and more expressive test steps.<br>
 
 <h3>Computer science</h3>
-**Concurrency vs parallelism**: parallelism handles many tasks at once but doesn't guarantee efficiency, concurrency is about switching between different tasks at once<br>
+<br>
+**Concurrency vs parallelism:** parallelism handles many tasks at once but doesn't guarantee efficiency, concurrency is about switching between different tasks at once<br>
+**Concurrency (współbieżność)** → wiele zadań _postrzegasz_ jako wykonywane w tym samym czasie, ale w rzeczywistości system może je przełączać (np. jedno chwilę działa, potem drugie, potem znowu pierwsze).
+    
+**Parallelism (równoległość)** → wiele zadań _naprawdę_ działa jednocześnie, fizycznie na różnych rdzeniach procesora.
 <img width="463" height="545" alt="image" src="https://github.com/user-attachments/assets/279534fd-0cd6-4c62-90ac-1aa0ebdcce5e" /><br>
 **Difference between Find Elements and find element**: FindElement() method: throws NoSuchElementException, FindElements() method: identify the list of web elements, returns empty list if can't find<br>
 - **Difference between implicity and explicity wait**<br>
