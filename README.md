@@ -9,6 +9,7 @@
 **Fluent Page Object Model**: Fluent POM uses chainable methods for cleaner, readable, and more expressive test steps.<br>
 
 <h3>Computer science</h3>
+
 **Concurrency vs parallelism**: parallelism handles many tasks at once but doesn't guarantee efficiency, concurrency is about switching between different tasks at once<br>
 <img width="463" height="545" alt="image" src="https://github.com/user-attachments/assets/279534fd-0cd6-4c62-90ac-1aa0ebdcce5e" /><br>
 **Difference between Find Elements and find element**: FindElement() method: throws NoSuchElementException, FindElements() method: identify the list of web elements, returns empty list if can't find<br>
